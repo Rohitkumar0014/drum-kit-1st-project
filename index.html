@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>musical game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      text-align: center;
+      background-color: navy;
+      color: white;
+      font-size: 100px;
+    }
+
+    button {
+      height: 100px;
+      width: 100px;
+      background-color: skyblue;
+      color: pink;
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 40px;
+      border-radious: 9px;
+      cursor: pointer;
+      box-shadow: 4px 4px 4px grey,
+        5px 5px 5px yellow,
+        6px 6px 6px white;
+      border: none;
+
+
+    }
+
+    .crash {
+      background-image: url("crash.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .kick {
+      background-image: url("kick.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .snare {
+      background-image: url("snare.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .tom1 {
+      background-image: url("tom1.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .tom2 {
+      background-image: url("tom2.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .tom3 {
+      background-image: url("tom3.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .tom4 {
+      background-image: url("tom4.png");
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+
+
+
+
+
+
+    button:hover {
+      border: 2px solid blue;
+      height: 98px;
+      width: 98px;
+
+
+    }
+
+    .
+  </style>
+</head>
+
+<body>
+  <h1 class="top">Drum 🎵 Kit </h1>
+  <div class="container">
+    <button class="btn crash">w</button>
+    <button class="btn kick">a</button>
+    <button class="btn snare">s</button>
+    <button class="btn tom1">d</button>
+    <button class="btn tom2">j</button>
+    <button class="btn tom3">k</button>
+    <button class="btn tom4">L</button>
+    <script class="btn">
+      var randomnumber = document.querySelectorAll(".btn").length;
+      for (var i = 0; i < randomnumber; i++) {
+        document.querySelectorAll(".btn")[i].addEventListener("click", function () {
+
+
+          var selectword = this.innerHTML;
+          switch (selectword) {
+            case "w": new Audio("crash.mp3").play();
+              break;
+            case "a": new Audio("kick-bass.mp3").play();
+              break;
+            case "s": new Audio("snare.mp3").play();
+              break;
+            case "d": new Audio("tom-1.mp3").play();
+              break;
+            case "j": new Audio("tom-2.mp3").play();
+              break;
+            case "k": new Audio("tom-3.mp3").play();
+              break;
+            case "L": new Audio("tom-4.mp3").play();
+              break;
+
+
+
+          }
+
+
+        });
+      }
+
+      // new Audio('crash.mp3').play();
+
+      var keyword = addEventListener("keypress", rk)
+
+      function rk(event) {
+        var storekey = event.code;
+
+        switch (storekey) {
+          case "KeyW": new Audio("crash.mp3").play();
+            break;
+          case "KeyA": new Audio("kick-bass.mp3").play();
+            break;
+          case "KeyS": new Audio("snare.mp3").play();
+            break;
+          case "KEYD": new Audio("tom-1.mp3").play();
+            break;
+          case "KeyJ": new Audio("tom-2.mp3").play();
+            break;
+          case "KEyK": new Audio("tom-3.mp3").play();
+            break;
+          case "KeyL": new Audio("tom-4.mp3").play();
+            break;
+
+
+
+        }
+
+      }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
